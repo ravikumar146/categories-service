@@ -1,16 +1,9 @@
 package com.nextgen.categoriesservice.controller;
 
 import org.junit.jupiter.api.Test;
-import org.springframework.boot.webmvc.test.autoconfigure.WebMvcTest;
 
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
-@WebMvcTest(
-        controllers = CategoryController.class,
-        properties = {
-                "spring.config.import=optional:"
-        }
-)
 public class CategoryControllerTest {
 
     @Test
