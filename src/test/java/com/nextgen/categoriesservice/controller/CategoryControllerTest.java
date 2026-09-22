@@ -5,10 +5,12 @@ import org.springframework.boot.webmvc.test.autoconfigure.WebMvcTest;
 
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
-@WebMvcTest(controllers = {CategoryController.class},
+@WebMvcTest(
+        controllers = CategoryController.class,
         properties = {
-                "spring.config.import="
-        })
+                "spring.config.import=optional:"
+        }
+)
 public class CategoryControllerTest {
 
     @Test
