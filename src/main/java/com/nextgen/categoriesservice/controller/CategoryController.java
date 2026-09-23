@@ -25,9 +25,9 @@ public class CategoryController {
     private CategoryService categoryService;
 
     @Operation(summary = "Get all categories")
-    @GetMapping("{domain}/list/")
-    public List<Category> getAllCategories(@Parameter(description = "Category Domain", example = "Health Care")
-                                           @PathVariable String domain) {
-        return categoryService.getAllCategories(domain);
+    @GetMapping("/list/{appName}")
+    public List<Category> getAllCategories(@Parameter(description = "Category Domain", example = "PHARMA")
+                                           @PathVariable String appName) {
+        return categoryService.getAllCategories(appName);
     }
 }
