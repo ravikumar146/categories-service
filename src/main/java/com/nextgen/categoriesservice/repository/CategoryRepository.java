@@ -7,6 +7,6 @@ import java.util.List;
 
 public interface CategoryRepository extends JpaRepository<Category, Long> {
 
-    List<Category> findByCategoryDomain(String categoryDomain);
+    List<Category> findByCategoryDomainOrderByIdAsc(String categoryDomain);
 
 }

@@ -17,7 +17,7 @@ public class CategoryServiceImpl implements CategoryService {
 
     @Override
     public List<Category> getAllCategories(String categoryDomain) {
-        List<Category> categories = categoryRepository.findByCategoryDomain(categoryDomain);
+        List<Category> categories = categoryRepository.findByCategoryDomainOrderByIdAsc(categoryDomain);
         if (categories == null || categories.isEmpty()) {
             throw new ResourceNotFoundException("No categories found for domain: " + categoryDomain);
         }
